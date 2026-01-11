@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { usePathname } from 'next/navigation';
 import Style from "./Header.module.scss";
 import Logo from "./Logo";
 import SearchIcon from "./SearchIcon";
@@ -10,16 +9,11 @@ import Icons from "@/styles/Icons";
 import { gsap } from 'gsap';
 
 const MainHeader: React.FC = () => {
-  const pathname = usePathname();
   const [isSearchExpanded, setIsSearchExpanded] = useState<boolean>(false);
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  
   const searchInputRef = useRef<HTMLInputElement>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLElement>(null);
-
-  // Check if current page is a blog detail page or work detail page
-  const isBlogDetailPage = pathname?.startsWith('/blog/') || false;
-  const isWorkDetailPage = pathname?.startsWith('/works/') || false;
 
   useEffect(() => {
     // Animate header on mount
@@ -31,28 +25,7 @@ const MainHeader: React.FC = () => {
         ease: 'power2.out',
       });
     }
-
-    // For blog detail pages or work detail pages, always show background at top
-    if (isBlogDetailPage || isWorkDetailPage) {
-      setIsScrolled(true);
-      return;
-    }
-
-    // Handle scroll to add/remove background (after 2-3 scrolls ~200px)
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 200);
-    };
-
-    // Check initial scroll position
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [pathname, isBlogDetailPage, isWorkDetailPage]);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -77,7 +50,7 @@ const MainHeader: React.FC = () => {
   return (
     <header 
       ref={headerRef} 
-      className={`${Style.MainHeader} ${isScrolled ? Style.scrolled : ''}`}
+      className={`${Style.MainHeader} ${Style.scrolled}`}
     >
       <div className="container">
         <div className="flex items-center justify-between py-6">
@@ -122,4 +95,3 @@ const MainHeader: React.FC = () => {
 };
 
 export default MainHeader;
-

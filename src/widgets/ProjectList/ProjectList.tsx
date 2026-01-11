@@ -152,11 +152,17 @@ const ProjectList: React.FC<ProjectListProps> = ({ data }) => {
           )}
         </div>
 
-         <div ref={projectsGridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 sm:gap-y-[60px]">
-           {projects.map((project, index) => (
-             <ProjectCard key={index} project={project} />
-           ))}
-         </div>
+         {projects.length > 0 ? (
+           <div ref={projectsGridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 sm:gap-y-[60px]">
+             {projects.map((project, index) => (
+               <ProjectCard key={index} project={project} />
+             ))}
+           </div>
+         ) : (
+           <div className="text-center py-12 sm:py-16 md:py-20">
+             <p className="text-lg sm:text-xl text-gray-500">No projects available</p>
+           </div>
+         )}
       </div>
     </section>
   );

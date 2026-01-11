@@ -74,18 +74,6 @@ const BlogDetailContent: React.FC<BlogDetailContentProps> = ({ data }) => {
     };
   }, [pathname, sections.length]);
 
-  // Normalize image path
-  const normalizeImagePath = (path: string | undefined | null): string => {
-    if (!path || typeof path !== 'string' || path.trim() === '') {
-      return '/images/blog1.png';
-    }
-    const trimmedPath = path.trim();
-    if (trimmedPath.startsWith('http://') || trimmedPath.startsWith('https://')) {
-      return trimmedPath;
-    }
-    return trimmedPath.startsWith('/') ? trimmedPath : `/${trimmedPath}`;
-  };
-
   const renderContentItem = (item: ContentItem, index: number) => {
     switch (item.type) {
       case 'heading':
@@ -134,14 +122,22 @@ const BlogDetailContent: React.FC<BlogDetailContentProps> = ({ data }) => {
         );
 
       case 'image':
-        const imagePath = normalizeImagePath(item.image);
+        if (!item.image || item.image.trim() === '') {
+          return null;
+        }
+        const trimmedImage = item.image.trim();
+        const imageSrc = trimmedImage.startsWith('http://') || trimmedImage.startsWith('https://')
+          ? trimmedImage
+          : trimmedImage.startsWith('/')
+          ? trimmedImage
+          : `/${trimmedImage}`;
         return (
           <div
             key={index}
             className="content-item relative w-full aspect-[16/10] rounded-md overflow-hidden bg-gray-100 my-8 sm:my-12"
           >
             <Image
-              src={imagePath}
+              src={imageSrc}
               alt={item.imageAlt || 'Blog content image'}
               fill
               className="object-cover"
@@ -154,6 +150,18 @@ const BlogDetailContent: React.FC<BlogDetailContentProps> = ({ data }) => {
         return null;
     }
   };
+
+  if (!sections || sections.length === 0) {
+    return (
+      <section className="w-full pb-12 sm:pb-16 md:pb-20 lg:pb-[100px] relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-center text-gray-500 py-12">No data available</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section ref={sectionRef} className="w-full pb-12 sm:pb-16 md:pb-20 lg:pb-[100px] relative">

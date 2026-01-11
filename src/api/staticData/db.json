@@ -1,31 +1,31 @@
 {
-  "homepage": {
-    "data": {
-      "seo": {
-        "id": 5,
-        "metaTitle": "Excelledia - is a prominent business process",
-        "metaDescription": "Excelledia is a prominent business process improvement and performance management consulting firm that helps businesses become more profitable.",
-        "metaOgImage": "",
-        "keywords": null,
-        "metaRobots": null,
-        "structuredData": null,
-        "metaViewport": null,
-        "canonicalURL": null,
-        "metaImage": {
-          "url": {
-            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
-            "alternativeText": null
-          },
-          "alternativeText": null
-        },
-        "metaSocial": []
-      },
-      "widgets": [
-        {
-          "widget_type": "HomeBanner",
-          "data": {
-            "bannerslides": [
-              {
+        "homepage": {
+                "data": {
+                  "seo": {
+                    "id": 5,
+                    "metaTitle": "Excelledia - is a prominent business process",
+                    "metaDescription": "Excelledia is a prominent business process improvement and performance management consulting firm that helps businesses become more profitable.",
+                    "metaOgImage": "",
+                    "keywords": null,
+                    "metaRobots": null,
+                    "structuredData": null,
+                    "metaViewport": null,
+                    "canonicalURL": null,
+                    "metaImage": {
+                      "url": {
+                        "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+                        "alternativeText": null
+                      },
+                      "alternativeText": null
+                    },
+                    "metaSocial": []
+                  },
+                  "widgets": [
+                    {
+                      "widget_type": "HomeBanner",
+                      "data": {
+                        "bannerslides": [
+                          {
                 "title": "Lee - All in One Learning Management System",
                 "link": "/",
                 "backgroundImage": "https://admin.excelledia.webc.in/uploads/banner1_fc6ced1bfe.png",
@@ -126,6 +126,31 @@
             "label": "Services",
             "title": "Design, Build, And Scale With Us",
             "description": "We help ambitious businesses move forward with services designed to attract, engage, and convert your audience.",
+            "service-title": "Brand & Identity Design",
+            "service-description": "We create timeless visual identities that capture your brand's personality and ensure consistency across every touchpoint.",
+            "services-items": [
+              {
+                "name": "Brand Strategy"
+              },
+              {
+                "name": "Logo Design"
+              },
+              {
+                "name": "Brand Guidelines"
+              },
+              {
+                "name": "Visual Identity Systems"
+              },
+              {
+                "name": "Social Media Branding"
+              },
+              {
+                "name": "Rebranding"
+              },
+              {
+                "name": "Brand Voice"
+              }
+            ],
             "services": [
               {
                 "title": "Digital Marketing",
@@ -168,34 +193,8 @@
                     "logo": "/images/framer-logo.png"
                   }
                 ]
-              },
-              {
-                "title": "Brand & Identity Design",
-                "description": "We create timeless visual identities that capture your brand's personality and ensure consistency across every touchpoint.",
-                "services": [
-                  {
-                    "name": "Brand Strategy"
-                  },
-                  {
-                    "name": "Logo Design"
-                  },
-                  {
-                    "name": "Brand Guidelines"
-                  },
-                  {
-                    "name": "Visual Identity Systems"
-                  },
-                  {
-                    "name": "Social Media Branding"
-                  },
-                  {
-                    "name": "Rebranding"
-                  },
-                  {
-                    "name": "Brand Voice"
-                  }
-                ]
               }
+             
             ],
             "ctaTitle": "Ready To Elvora Your Brand?",
             "ctaDescription": "Let's turn your ideas into impactful designs. Book a call today and start building something remarkable.",
@@ -802,10 +801,10 @@
         "metaImage": {
           "url": {
             "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
-            "alternativeText": null
-          },
-          "alternativeText": null
-        },
+                              "alternativeText": null
+                            },
+                              "alternativeText": null
+                            },
         "metaSocial": []
       },
       "widgets": [
@@ -938,10 +937,10 @@
         "metaImage": {
           "url": {
             "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
-            "alternativeText": null
-          },
-          "alternativeText": null
-        },
+                              "alternativeText": null
+                            },
+                              "alternativeText": null
+                            },
         "metaSocial": []
       },
       "widgets": [
@@ -1056,10 +1055,10 @@
         "metaImage": {
           "url": {
             "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
-            "alternativeText": null
-          },
-          "alternativeText": null
-        },
+                              "alternativeText": null
+                            },
+                              "alternativeText": null
+                            },
         "metaSocial": []
       },
       "widgets": [
@@ -1494,4 +1493,4 @@
       ]
     }
   }
-}
+  }

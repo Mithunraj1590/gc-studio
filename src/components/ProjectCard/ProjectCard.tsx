@@ -15,12 +15,12 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { image, year, title, tags, link = "#" } = project;
+  const { image, year, title, tags, link = "/" } = project;
 
   // Normalize image path - ensure it starts with / for local images
   const normalizeImagePath = (path: string | undefined | null): string => {
     if (!path || typeof path !== 'string' || path.trim() === '') {
-      return '/images/pro1.png'; // Default fallback
+      return ''; // Return empty string instead of fallback image
     }
     
     const trimmedPath = path.trim();
@@ -40,11 +40,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     <Link href={link} className="block group">
       <div className="relative overflow-hidden">
         {/* Project Image */}
-        {normalizedImage && (
+        {normalizedImage && normalizedImage.trim() !== '' && (
           <div className="aspect-[4/3] overflow-hidden rounded-md bg-gray-200 relative">
             <Image
               src={normalizedImage}
-              alt={title}
+              alt={title || 'Project image'}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -61,24 +61,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
             {/* Year and Title Row */}
             <div className="">
-              <span className="text-xs sm:text-sm text-[#878787] font-medium flex-shrink-0 block w-full mb-2">
-                | {year} |
-              </span>
-              <h3 className="ttl text-[22px] sm:text-[25px] md:text-[30px] font-bold text-black  min-w-0">
-                {title}
-              </h3>
+              {year && (
+                <span className="text-xs sm:text-sm text-[#878787] font-medium flex-shrink-0 block w-full mb-2">
+                  | {year} |
+                </span>
+              )}
+              {title && (
+                <h3 className="ttl text-[22px] sm:text-[25px] md:text-[30px] font-bold text-black  min-w-0">
+                  {title}
+                </h3>
+              )}
             </div>
             {/* Tags - Next line on mobile, same line on larger screens */}
-            <div className="flex items-center gap-1 sm:gap-2 sm:ml-auto flex-wrap">
-              {tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-2 text-[#878787] sm:px-3 py-1 text-[12px] sm:text-xs font-normal text-gray-700 border border-[#DDDDDD] rounded-[30px] hover:border-primary hover:text-primary transition-colors duration-300 whitespace-nowrap"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            {tags && tags.length > 0 && (
+              <div className="flex items-center gap-1 sm:gap-2 sm:ml-auto flex-wrap">
+                {tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="px-2 text-[#878787] sm:px-3 py-1 text-[12px] sm:text-xs font-normal text-gray-700 border border-[#DDDDDD] rounded-[30px] hover:border-primary hover:text-primary transition-colors duration-300 whitespace-nowrap"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

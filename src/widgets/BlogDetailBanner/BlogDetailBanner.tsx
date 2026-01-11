@@ -11,19 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface BlogDetailBannerProps {
   data?: {
-    backLink?: string;
-    backLinkText?: string;
     title?: string;
     description?: string;
     categoriesHeading?: string;
     categories?: string[];
     tags?: string[];
-    readArticleText?: string;
-    readArticleLink?: string;
     mainImage?: string;
     author?: string;
     date?: string;
-    readTime?: string;
     sharePlatforms?: Array<'facebook' | 'twitter' | 'linkedin' | 'whatsapp' | 'email' | 'copy'>;
   };
 }

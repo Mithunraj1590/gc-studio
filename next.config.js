@@ -7,6 +7,11 @@ const nextConfig = {
         protocol: 'http',
         hostname: 'localhost',
       },
+      {
+        protocol: 'https',
+        hostname: 'lightsalmon-gaur-152305.hostingersite.com',
+        pathname: '/**',
+      },
     ],
 },
   turbopack: {},

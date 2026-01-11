@@ -12,23 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 interface Service {
   title: string;
   description: string;
-  link?: string;
   image?: string;
-  socialPost?: {
-    image: string;
-    likes: string;
-    comments: string;
-    shares: string;
-    text: string;
-    hashtags: string[];
-  };
-  tools?: Array<{
-    name: string;
-    logo: string;
-  }>;
-  services?: Array<{
-    name: string;
-  }>;
 }
 
 interface HomeServiceProps {
@@ -37,6 +21,11 @@ interface HomeServiceProps {
     title?: string;
     description?: string;
     services?: Service[];
+    serviceTitle?: string;
+    serviceDescription?: string;
+    servicesItems?: Array<{
+      name: string;
+    }>;
     ctaTitle?: string;
     ctaDescription?: string;
     ctaButtonText?: string;
@@ -51,6 +40,9 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
   const title = data?.title || "Design, Build, And Scale With Us";
   const description = data?.description || "We help ambitious businesses move forward with services designed to attract, engage, and convert your audience.";
   const services = data?.services || [];
+  const serviceTitle = data?.serviceTitle || data?.['service-title'] || "Brand & Identity Design";
+  const serviceDescription = data?.serviceDescription || data?.['service-description'] || "We create memorable brand identities that resonate with your audience and stand out in the market.";
+  const servicesItems = data?.servicesItems || data?.['services-items'] || [];
   const ctaTitle = data?.ctaTitle || "Ready To Elvora Your Brand?";
   const ctaDescription = data?.ctaDescription || "Let's turn your ideas into impactful designs. Book a call today and start building something remarkable.";
   const ctaButtonText = data?.ctaButtonText || "Book A Call";
@@ -60,7 +52,8 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const servicesGridRef = useRef<HTMLDivElement>(null);
-  const bottomGridRef = useRef<HTMLDivElement>(null);
+  const staticContentRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!sectionRef.current) return;
@@ -72,11 +65,14 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
       gsap.set(headerRef.current.children, { opacity: 0, y: 30 });
     }
     if (servicesGridRef.current) {
-      const serviceCards = servicesGridRef.current.querySelectorAll('a');
+      const serviceCards = servicesGridRef.current.querySelectorAll('div[class*="bg-white"]');
       gsap.set(serviceCards, { opacity: 0, y: 50 });
     }
-    if (bottomGridRef.current) {
-      gsap.set(bottomGridRef.current.children, { opacity: 0, x: 50 });
+    if (staticContentRef.current) {
+      gsap.set(staticContentRef.current, { opacity: 0, x: -50 });
+    }
+    if (ctaRef.current) {
+      gsap.set(ctaRef.current, { opacity: 0, x: 50 });
     }
 
     // Animate header
@@ -105,7 +101,7 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
         start: 'top 75%',
         once: true,
         onEnter: () => {
-          const serviceCards = servicesGridRef.current!.querySelectorAll('a');
+          const serviceCards = servicesGridRef.current!.querySelectorAll('div[class*="bg-white"]');
           gsap.to(serviceCards, {
             opacity: 1,
             y: 0,
@@ -118,20 +114,41 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
       triggers.push(trigger);
     }
 
-    // Animate bottom grid
-    if (bottomGridRef.current) {
+    // Animate static content section
+    if (staticContentRef.current) {
       const trigger = ScrollTrigger.create({
-        trigger: bottomGridRef.current,
+        trigger: staticContentRef.current,
         start: 'top 75%',
         once: true,
         onEnter: () => {
-          gsap.to(bottomGridRef.current!.children, {
-            opacity: 1,
-            x: 0,
-            duration: 0.8,
-            stagger: 0.2,
-            ease: 'power3.out',
-          });
+          if (staticContentRef.current) {
+            gsap.to(staticContentRef.current, {
+              opacity: 1,
+              x: 0,
+              duration: 0.8,
+              ease: 'power3.out',
+            });
+          }
+        },
+      });
+      triggers.push(trigger);
+    }
+
+    // Animate CTA
+    if (ctaRef.current) {
+      const trigger = ScrollTrigger.create({
+        trigger: ctaRef.current,
+        start: 'top 75%',
+        once: true,
+        onEnter: () => {
+          if (ctaRef.current) {
+            gsap.to(ctaRef.current, {
+              opacity: 1,
+              x: 0,
+              duration: 0.8,
+              ease: 'power3.out',
+            });
+          }
         },
       });
       triggers.push(trigger);
@@ -168,119 +185,44 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
 
         {/* Services Grid */}
         <div ref={servicesGridRef} className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-6 sm:mb-8 lg:mb-12">
-          {/* Service 1 - Digital Marketing */}
-          {services[0] && (
-            <Link href={services[0].link || "/services"} className="block">
+          {services.map((service, index) => (
+            <div key={index} className="block">
               <div className='bg-white rounded-lg p-4 sm:p-6 md:p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer'>
-              <h3 className="ttl text-xl sm:text-2xl md:text-[30px] font-semibold text-black mb-3 sm:mb-4">
-                {services[0].title}
-              </h3>
-              <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-                {services[0].description}
-              </p>
-              {services[0].socialPost && (
-                <div className="bg-white border border-gray-200 rounded-lg p-3 sm:p-4">
-                  {services[0].socialPost.image && (
-                    <div className="relative w-full aspect-square rounded-lg overflow-hidden mb-3 sm:mb-4">
-                      <Image
-                        src={services[0].socialPost.image}
-                        alt="Social media post"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  )}
-                  <div className="flex items-center gap-4 sm:gap-6 mb-2 sm:mb-3 text-xs sm:text-sm text-gray-600">
-                    <span>{services[0].socialPost.likes}</span>
-                    <span>{services[0].socialPost.comments}</span>
-                    <span>{services[0].socialPost.shares}</span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-gray-700 mb-2">
-                    {services[0].socialPost.text}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {services[0].socialPost.hashtags.map((tag, index) => (
-                      <span key={index} className="text-xs sm:text-sm text-blue-600">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <span className="text-xs sm:text-sm text-gray-500">See more...</span>
-                </div>
-              )}
-              </div>
-            </Link>
-          )}
-
-          {/* Service 2 & 3 - Design & Development, No-Code */}
-          <div>
-            {services[1] && (
-              <Link href={services[1].link || "/services"} className="block mb-6 sm:mb-8 lg:mb-12">
-                <div className="bg-white rounded-lg p-4 sm:p-6 md:p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <h3 className="ttl text-xl sm:text-2xl md:text-[30px] font-semibold text-black mb-3 sm:mb-4">
-                  {services[1].title}
+                  {service.title}
                 </h3>
                 <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-                  {services[1].description}
+                  {service.description}
                 </p>
-                {services[1].image && (
-                  <div className="relative w-full aspect-[9/12] max-w-xs mx-auto lg:mx-0">
+                {service.image && (
+                  <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                     <Image
-                      src={services[1].image}
-                      alt={services[1].title}
+                      src={service.image}
+                      alt={service.title}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover transition-transform duration-500 hover:scale-110"
                     />
                   </div>
                 )}
-                </div>
-              </Link>
-            )}
-
-            {services[2] && (
-              <Link href={services[2].link || "/services"} className="block">
-                <div className='bg-white rounded-lg p-4 sm:p-6 md:p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer'>
-                <h3 className="ttl text-xl sm:text-2xl md:text-[30px] font-semibold text-black mb-3 sm:mb-4">
-                  {services[2].title}
-                </h3>
-                <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-                  {services[2].description}
-                </p>
-                {services[2].tools && (
-                  <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
-                    {services[2].tools.map((tool, index) => (
-                      <div key={index} className="w-10 h-10 sm:w-12 sm:h-12 relative">
-                        <Image
-                          src={tool.logo}
-                          alt={tool.name}
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                )}
-                </div>
-              </Link>
-            )}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom Section - Brand & Identity + CTA */}
-        <div ref={bottomGridRef} className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
-          {/* Brand & Identity Design */}
-          {services[3] && (
-            <Link href={services[3].link || "/services"} className="inline-block">
-              <div className='bg-white rounded-lg p-4 sm:p-6 md:p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer'>
+        {/* Bottom Section - Static Content + CTA */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+          {/* Static Content Section */}
+          <div ref={staticContentRef} className="inline-block">
+            <div className='bg-white rounded-lg p-4 sm:p-6 md:p-8'>
               <h3 className="ttl text-xl sm:text-2xl md:text-[30px] font-semibold text-black mb-3 sm:mb-4">
-                {services[3].title}
+                {serviceTitle}
               </h3>
               <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-                {services[3].description}
+                {serviceDescription}
               </p>
-              {services[3].services && (
+              {servicesItems.length > 0 && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {services[3].services.map((service, index) => (
+                  {servicesItems.map((item, index) => (
                     <div
                       key={index}
                       className="flex items-center gap-2 px-3 sm:px-4 py-2 sm:py-3 border border-orange-200 rounded-lg bg-white hover:border-orange-500 transition-colors duration-300"
@@ -302,18 +244,17 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
                         />
                       </svg>
                       <span className="text-xs sm:text-sm text-gray-700 font-medium">
-                        {service.name}
+                        {item.name}
                       </span>
                     </div>
                   ))}
                 </div>
               )}
-              </div>
-            </Link>
-          )}
+            </div>
+          </div>
 
           {/* CTA Section */}
-          <div className="relative bg-[#141414] rounded-lg p-6 sm:p-8 lg:p-12">
+          <div ref={ctaRef} className="relative bg-[#141414] rounded-lg p-6 sm:p-8 lg:p-12">
             <div className="relative z-10">
               <h3 className="ttl text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40px] font-semibold text-white mb-3 sm:mb-4">
                 {ctaTitle}

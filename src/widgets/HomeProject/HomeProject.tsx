@@ -32,10 +32,10 @@ interface HomeProjectProps {
 
 const HomeProject: React.FC<HomeProjectProps> = ({ data }) => {
   const pathname = usePathname();
-  const label = data?.label || "Projects";
-  const title = data?.title || "Bringing Ideas To Life Through Design";
-  const description = data?.description || "We collaborate with ambitious clients to create digital experiences that inspire, engage, and drive meaningful results.";
-  const buttonText = data?.buttonText || "View All Project";
+  const label = data?.label || "";
+  const title = data?.title || "";
+  const description = data?.description || "";
+  const buttonText = data?.buttonText || "";
   const buttonLink = data?.buttonLink || "/projects";
   const projects = data?.projects || [];
 
@@ -133,38 +133,52 @@ const HomeProject: React.FC<HomeProjectProps> = ({ data }) => {
         {/* Header Section */}
         <div ref={headerRef} className="flex flex-col md:flex-row items-end justify-between gap-6 sm:gap-8 mb-8 sm:mb-10 md:mb-12">
           <div className="w-full md:w-2/3">
-            <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <span className="text-xs sm:text-sm text-[#EA7B7B] font-medium">|</span>
-              <span className="text-xs sm:text-sm text-black font-medium">{label}</span>
-              <span className="text-xs sm:text-sm text-[#EA7B7B] font-medium">|</span>
-            </div>
-            <h2 className="h2 font-semibold text-black mb-3 sm:mb-4 leading-tight">
-              {title}
-            </h2>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
-              {description}
-            </p>
+            {label && (
+              <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                <span className="text-xs sm:text-sm text-[#EA7B7B] font-medium">|</span>
+                <span className="text-xs sm:text-sm text-black font-medium">{label}</span>
+                <span className="text-xs sm:text-sm text-[#EA7B7B] font-medium">|</span>
+              </div>
+            )}
+            {title && (
+              <h2 className="h2 font-semibold text-black mb-3 sm:mb-4 leading-tight">
+                {title}
+              </h2>
+            )}
+            {description && (
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
+                {description}
+              </p>
+            )}
           </div>
           
-          <div className="w-full md:w-1/3 flex justify-start md:justify-end">
-            <Link
-              href={buttonLink}
-              className="btn btn-primary"
-            >
-              {buttonText}
-            </Link>
-          </div>
+          {buttonText && (
+            <div className="w-full md:w-1/3 flex justify-start md:justify-end">
+              <Link
+                href={buttonLink}
+                className="btn btn-primary"
+              >
+                {buttonText}
+              </Link>
+            </div>
+          )}
         </div>
 
         {/* Divider */}
         <div ref={dividerRef} className="w-full h-px bg-gray-300 mb-8 sm:mb-10 md:mb-12"></div>
 
         {/* Projects Grid */}
-        <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 sm:gap-y-[60px]">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
+        {projects.length > 0 ? (
+          <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 sm:gap-y-[60px]">
+            {projects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12 sm:py-16 md:py-20">
+            <p className="text-lg sm:text-xl text-gray-500">No projects available</p>
+          </div>
+        )}
       </div>
     </section>
   );
