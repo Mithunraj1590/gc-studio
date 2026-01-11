@@ -1,4 +1,4 @@
-import getPageContent from "@/utilities/usePageContent";
+import nextFetch from "@/utilities/nextFetch";
 import { useEffect, useState, ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 
@@ -26,7 +26,7 @@ export const useSearch = (
   const [searchResults, setSearchResults] = useState<any[]>([]);
 
   const getSearchData = async (): Promise<void> => {
-    const response = await getPageContent(`search?search=${searchTerm}`);
+    const response = await nextFetch(`api/general/search?search=${searchTerm}`);
     setSearchKeywords(response?.data?.widgets?.[0]?.data?.search_keywords);
     setSearchResults(response?.data?.widgets?.[0]?.data?.results);
   };
