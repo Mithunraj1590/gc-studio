@@ -1,0 +1,17 @@
+.abc {
+    display: block;
+}
+
+.fonts {
+    border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
+    max-width: 50%;
+}
+
+.typography {
+    :global(.active) {
+        .hide {
+            height: 50px;
+            transition: all .3s ease-in-out;
+        }
+    }
+}

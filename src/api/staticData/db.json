@@ -1,0 +1,1497 @@
+{
+  "homepage": {
+    "data": {
+      "seo": {
+        "id": 5,
+        "metaTitle": "Excelledia - is a prominent business process",
+        "metaDescription": "Excelledia is a prominent business process improvement and performance management consulting firm that helps businesses become more profitable.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "HomeBanner",
+          "data": {
+            "bannerslides": [
+              {
+                "title": "Lee - All in One Learning Management System",
+                "link": "/",
+                "backgroundImage": "https://admin.excelledia.webc.in/uploads/banner1_fc6ced1bfe.png",
+                "thumbnail": "https://admin.excelledia.webc.in/uploads/banner1_fc6ced1bfe.png"
+              },
+              {
+                "title": "Isorobot - One Learning Management System",
+                "link": "https://isorobot.io/",
+                "backgroundImage": "https://admin.excelledia.webc.in/uploads/excelledia_banner_dcaa518419.jpg",
+                "thumbnail": "https://admin.excelledia.webc.in/uploads/excelledia_banner_dcaa518419.jpg"
+              },
+              {
+                "title": "Xiro - Learning Management System",
+                "link": "https://xiro.ai/",
+                "backgroundImage": "https://admin.excelledia.webc.in/uploads/banner2_390e9ecec0.png",
+                "thumbnail": "https://admin.excelledia.webc.in/uploads/banner2_390e9ecec0.png"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "TwoColumnSection",
+          "data": {
+            "items": [
+              {
+                "title": "First Section",
+                "text": "This is the first section content with engaging information about our services and approach."
+              },
+              {
+                "title": "Second Section",
+                "text": "Discover how we transform ideas into reality through innovative design and development solutions."
+              },
+              {
+                "title": "Third Section",
+                "text": "Our team combines creativity with technical expertise to deliver exceptional digital experiences."
+              },
+              {
+                "title": "Fourth Section",
+                "text": "Partner with us to elevate your brand and achieve your business goals with cutting-edge solutions."
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "AboutSection",
+          "data": {
+            "title": "Passionate About Quality Design",
+            "description": "If you ask our clients what it's like working with 36, they'll talk about how much we care about their success. For us, real relationships fuel real success.",
+            "aboutItems": [
+              {
+                "text": "Simplicity The Biggest Idea A Looked"
+              },
+              {
+                "text": "Mastering The Art Of Conversion"
+              },
+              {
+                "text": "Keeping Advertising Standards High"
+              }
+            ],
+            "buttonText": "MORE ABOUT US",
+            "buttonLink": "/about",
+            "mainImage": "/images/6.jpg",
+            "clientCount": "2566+",
+            "clientText": "More Then Clients Global Reviews",
+            "partnerCount": "2337+",
+            "partnerText": "Our Trusted & Valuable Clients",
+            "partners": [
+              {
+                "image": "/assets/img/partner-img/1.png",
+                "alt": "Partner 1"
+              },
+              {
+                "image": "/assets/img/partner-img/2.png",
+                "alt": "Partner 2"
+              },
+              {
+                "image": "/assets/img/partner-img/3.png",
+                "alt": "Partner 3"
+              },
+              {
+                "image": "/assets/img/partner-img/4.png",
+                "alt": "Partner 4"
+              },
+              {
+                "image": "/assets/img/partner-img/3.png",
+                "alt": "Partner 5"
+              },
+              {
+                "image": "/assets/img/partner-img/5.png",
+                "alt": "Partner 6"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "HomeService",
+          "data": {
+            "label": "Services",
+            "title": "Design, Build, And Scale With Us",
+            "description": "We help ambitious businesses move forward with services designed to attract, engage, and convert your audience.",
+            "services": [
+              {
+                "title": "Digital Marketing",
+                "description": "Our data-driven campaigns amplify your reach, turning audiences into loyal customers through strategy, content, and optimization.",
+                "socialPost": {
+                  "image": "/images/digital-marketing-post.jpg",
+                  "likes": "402k",
+                  "comments": "4,182",
+                  "shares": "901k",
+                  "text": "From alfresco entertaining to chilled evenings, this property blends design with sunsets that make these moments unforgettable. 🌅🍹✨",
+                  "hashtags": [
+                    "#LuxuryLiving",
+                    "#AlfrescoDining",
+                    "#SunsetViews",
+                    "#TravelInStyle",
+                    "#LuxuryRetreat",
+                    "#DreamStay"
+                  ]
+                }
+              },
+              {
+                "title": "Design & Development",
+                "description": "From concept to launch, we build responsive, high-performing websites that blend creativity, usability, and scalability.",
+                "image": "/images/design-development.jpg"
+              },
+              {
+                "title": "No-Code Development",
+                "description": "We leverage modern no-code tools to launch powerful digital products quickly, without sacrificing quality or flexibility.",
+                "tools": [
+                  {
+                    "name": "Webflow",
+                    "logo": "/images/webflow-logo.png"
+                  },
+                  {
+                    "name": "Figma",
+                    "logo": "/images/figma-logo.png"
+                  },
+                  {
+                    "name": "Framer",
+                    "logo": "/images/framer-logo.png"
+                  }
+                ]
+              },
+              {
+                "title": "Brand & Identity Design",
+                "description": "We create timeless visual identities that capture your brand's personality and ensure consistency across every touchpoint.",
+                "services": [
+                  {
+                    "name": "Brand Strategy"
+                  },
+                  {
+                    "name": "Logo Design"
+                  },
+                  {
+                    "name": "Brand Guidelines"
+                  },
+                  {
+                    "name": "Visual Identity Systems"
+                  },
+                  {
+                    "name": "Social Media Branding"
+                  },
+                  {
+                    "name": "Rebranding"
+                  },
+                  {
+                    "name": "Brand Voice"
+                  }
+                ]
+              }
+            ],
+            "ctaTitle": "Ready To Elvora Your Brand?",
+            "ctaDescription": "Let's turn your ideas into impactful designs. Book a call today and start building something remarkable.",
+            "ctaButtonText": "Book A Call",
+            "ctaButtonLink": "/contact",
+            "ctaImage": "/images/cube.png"
+          }
+        },
+        {
+          "widget_type": "HomeProcess",
+          "data": {
+            "label": "Our Process",
+            "title": "Turning Ideas Into Meaningful Experiences",
+            "description": "Every step of our process is built to align with your goals and create measurable impact.",
+            "steps": [
+              {
+                "number": "01",
+                "icon": "/images/process-discover.png",
+                "title": "Discover",
+                "description": "We start by understanding your brand, goals, and audience to set a strong creative foundation."
+              },
+              {
+                "number": "02",
+                "icon": "/images/process-design.png",
+                "title": "Design",
+                "description": "Our team transforms insights into bold visuals, crafting layouts, interactions, and branding that resonate."
+              },
+              {
+                "number": "03",
+                "icon": "/images/process-develop.png",
+                "title": "Develop",
+                "description": "We bring designs to life with seamless development, ensuring speed, responsiveness, and flawless execution."
+              },
+              {
+                "number": "04",
+                "icon": "/images/process-deliver.png",
+                "title": "Deliver",
+                "description": "Your project goes live polished and optimized, ready to engage your audience and drive measurable results."
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "HomeProject",
+          "data": {
+            "label": "Projects",
+            "title": "Bringing Ideas To Life Through Design",
+            "description": "We collaborate with ambitious clients to create digital experiences that inspire, engage, and drive meaningful results.",
+            "buttonText": "View All Project",
+            "buttonLink": "/projects",
+            "projects": [
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "SparkHub",
+                "tags": [
+                  "Mobile App",
+                  "Strategy"
+                ],
+                "link": "/project/sparkhub"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "PulseTrack",
+                "tags": [
+                  "Branding",
+                  "E-Commerce"
+                ],
+                "link": "/project/pulsetrack"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "FlowDesk",
+                "tags": [
+                  "Branding",
+                  "Saas"
+                ],
+                "link": "/project/flowdesk"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "CloudNest",
+                "tags": [
+                  "Finance",
+                  "Saas"
+                ],
+                "link": "/project/cloudnest"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "FAQSection",
+          "data": {
+            "label": "FAQ",
+            "title": "Everything You Need To Know",
+            "description": "Explore our FAQs for clarity on our approach, services, and results. And if you don't see your answer, we're just a call away.",
+            "faqs": [
+              {
+                "question": "How Long Does A Typical Project Take?",
+                "answer": "Our Timelines Vary Depending On Scope, But Most Brand Identity Projects Take 2-3 Weeks, While Full Websites Can Take 4-8 Weeks From Start To Launch."
+              },
+              {
+                "question": "Do You Work With Startups Or Only Established Companies?",
+                "answer": "We Work With Both. Whether You're Launching Your First Brand Or Scaling An Existing Business, We Tailor Our Services To Match Your Stage And Goals."
+              },
+              {
+                "question": "What If I Need More Than What's Included In A Package?",
+                "answer": "No Problem. Our Pricing Plans Are Flexible — We Can Add Services Like SEO, Content Creation, Or Marketing Support To Create A Custom Solution."
+              },
+              {
+                "question": "Do You Offer Ongoing Support After Launch?",
+                "answer": "Yes. We Provide Post-Launch Support, From Technical Fixes To Design Updates, And Can Also Partner On Long-Term Optimization And Growth."
+              },
+              {
+                "question": "Will My Website Work On Mobile Devices?",
+                "answer": "Absolutely. Every Site We Design Is Responsive By Default, Meaning It Adapts Seamlessly To Mobile, Tablet, And Desktop Screens."
+              },
+              {
+                "question": "How Do We Get Started?",
+                "answer": "Simply Book A Call With Our Team. We'll Learn About Your Goals, Outline The Right Plan, And Guide You Step-By-Step Through The Process."
+              }
+            ],
+            "ctaTitle": "Didn't Find Your Answer?",
+            "ctaDescription": "We'd love to help. Book a call with our team and get answers tailored to your specific needs.",
+            "ctaButtonText": "Contact Us",
+            "ctaButtonLink": "/contact"
+          }
+        },
+        {
+          "widget_type": "HomeBlog",
+          "data": {
+            "label": "Blogs",
+            "title": "Bringing Ideas To Life Through Design",
+            "description": "We collaborate with ambitious clients to create digital experiences that inspire, engage, and drive meaningful results.",
+            "buttonText": "View All Blogs",
+            "buttonLink": "/blogs",
+            "blogs": [
+              {
+                "image": "/images/blog1.png",
+                "author": "Emily Chen",
+                "date": "March 4, 2025",
+                "title": "Why Strong Branding Is The Key To Business Growth",
+                "tags": [
+                  "Branding",
+                  "Strategy"
+                ],
+                "link": "/blog/strong-branding-key-business-growth"
+              },
+              {
+                "image": "/images/blog2.png",
+                "author": "Daniel Carter",
+                "date": "April 12, 2025",
+                "title": "The Future Of No-Code Development For Startups",
+                "tags": [
+                  "Development",
+                  "Innovation"
+                ],
+                "link": "/blog/future-no-code-development-startups"
+              },
+              {
+                "image": "/images/blog2.png",
+                "author": "Priya Shah",
+                "date": "May 1, 2025",
+                "title": "Designing Websites That Convert: 5 Proven Principles",
+                "tags": [
+                  "Marketing",
+                  "UI/UX"
+                ],
+                "link": "/blog/designing-websites-convert-principles"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "about": {
+    "data": {
+      "seo": {
+        "id": 5,
+        "metaTitle": "About Us - Excelledia",
+        "metaDescription": "Learn more about our company and team here.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "InnerBanner",
+          "data": {
+            "title": "About Us",
+            "backgroundImage": "",
+            "backgroundColor": ""
+          }
+        },
+        {
+          "widget_type": "AboutSection",
+          "data": {
+            "title": "Passionate About Quality Design",
+            "description": "If you ask our clients what it's like working with 36, they'll talk about how much we care about their success. For us, real relationships fuel real success.",
+            "aboutItems": [
+              {
+                "text": "Simplicity The Biggest Idea A Looked"
+              },
+              {
+                "text": "Mastering The Art Of Conversion"
+              },
+              {
+                "text": "Keeping Advertising Standards High"
+              }
+            ],
+            "mainImage": "/images/6.jpg",
+            "clientCount": "2566+",
+            "clientText": "More Then Clients Global Reviews",
+            "partnerCount": "2337+",
+            "partnerText": "Our Trusted & Valuable Clients",
+            "partners": [
+              {
+                "image": "/assets/img/partner-img/1.png",
+                "alt": "Partner 1"
+              },
+              {
+                "image": "/assets/img/partner-img/2.png",
+                "alt": "Partner 2"
+              },
+              {
+                "image": "/assets/img/partner-img/3.png",
+                "alt": "Partner 3"
+              },
+              {
+                "image": "/assets/img/partner-img/4.png",
+                "alt": "Partner 4"
+              },
+              {
+                "image": "/assets/img/partner-img/3.png",
+                "alt": "Partner 5"
+              },
+              {
+                "image": "/assets/img/partner-img/5.png",
+                "alt": "Partner 6"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "AboutGrid",
+          "data": {
+            "label": "About Us",
+            "title": "Driven By Creativity, Committed To Excellence.",
+            "description": "Our team blends strategy, design, and technology to craft solutions that not only look great but also deliver measurable results.",
+            "images": {
+              "topLeft": "/images/about1.png",
+              "bottomLeft": "/images/about2.png",
+              "right": "/images/about3.png"
+            },
+            "footerText": "Trusted by the biggest brands worldwide",
+            "brands": [
+              {
+                "name": "Samsung",
+                "logo": "/images/brands/samsung.png",
+                "alt": "Samsung"
+              },
+              {
+                "name": "AWS",
+                "logo": "/images/brands/aws.png",
+                "alt": "Amazon Web Services"
+              },
+              {
+                "name": "Netlify",
+                "logo": "/images/brands/netlify.png",
+                "alt": "Netlify"
+              },
+              {
+                "name": "Retool",
+                "logo": "/images/brands/retool.png",
+                "alt": "Retool"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "AboutTeam",
+          "data": {
+            "label": "Meet The Team",
+            "title": "The People Who Make It Happen",
+            "description": "We believe the best work comes from teamwork. Our diverse team works closely to turn concepts into reality.",
+            "members": [
+              {
+                "name": "Daniel Carter",
+                "role": "Co-Founder",
+                "image": "/images/team1.png",
+                "linkedin": "https://www.linkedin.com/in/daniel-carter"
+              },
+              {
+                "name": "Sophia Martinez",
+                "role": "Co-Founder",
+                "image": "/images/team2.png",
+                "linkedin": "https://www.linkedin.com/in/sophia-martinez"
+              },
+              {
+                "name": "Hana Suzuki",
+                "role": "Client Success Manager",
+                "image": "/images/team1.png",
+                "linkedin": "https://www.linkedin.com/in/hana-suzuki"
+              },
+              {
+                "name": "Ethan Wong",
+                "role": "Lead Developer",
+                "image": "/images/team2.png",
+                "linkedin": "https://www.linkedin.com/in/ethan-wong"
+              },
+              {
+                "name": "Priya Shah",
+                "role": "UX/UI Designer",
+                "image": "/images/team1.png",
+                "linkedin": "https://www.linkedin.com/in/priya-shah"
+              },
+              {
+                "name": "Michael Rivera",
+                "role": "Project Manager",
+                "image": "/images/team2.png",
+                "linkedin": "https://www.linkedin.com/in/michael-rivera"
+              },
+              {
+                "name": "Amira Hassan",
+                "role": "Marketing Strategist",
+                "image": "/images/team1.png",
+                "linkedin": "https://www.linkedin.com/in/amira-hassan"
+              },
+              {
+                "name": "Lucas Bennett",
+                "role": "Brand Designer",
+                "image": "/images/team2.png",
+                "linkedin": "https://www.linkedin.com/in/lucas-bennett"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "CTASection",
+          "data": {
+            "title": "Ready To Work With Us?",
+            "subtitle": "Let's collaborate to bring your vision to life. Our team is ready to help you create something extraordinary.",
+            "buttonText": "Get In Touch",
+            "buttonLink": "/contact",
+            "backgroundColor": "bg-black",
+            "textColor": "text-white"
+          }
+        }
+      ]
+    }
+  },
+  "services": {
+    "data": {
+      "seo": {
+        "id": 6,
+        "metaTitle": "Services - Excelledia",
+        "metaDescription": "Discover our comprehensive range of services designed to help your business grow and succeed.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "InnerBanner",
+          "data": {
+            "title": "Our Services",
+            "backgroundImage": "images/bg.webp"
+          }
+        },
+        {
+          "widget_type": "ServiceList",
+          "data": {
+            "services": [
+              {
+                "title": "Digital Marketing",
+                "highlightedWord": "Digital",
+                "services": [
+                  {
+                    "name": "Social Media Management"
+                  },
+                  {
+                    "name": "Performance Marketing"
+                  },
+                  {
+                    "name": "Search Engine Optimisation"
+                  },
+                  {
+                    "name": "Content Marketing"
+                  },
+                  {
+                    "name": "Marketing Automation"
+                  },
+                  {
+                    "name": "Analytics"
+                  }
+                ],
+                "ctaText": "Explore digital marketing",
+                "ctaLink": "/services/digital-marketing",
+                "video": "/Digital_marketing.mp4",
+                "videoType": "mp4"
+              },
+              {
+                "title": "Web Development",
+                "highlightedWord": "Web",
+                "services": [
+                  {
+                    "name": "Frontend Development"
+                  },
+                  {
+                    "name": "Backend Development"
+                  },
+                  {
+                    "name": "Full-Stack Solutions"
+                  },
+                  {
+                    "name": "E-Commerce Platforms"
+                  },
+                  {
+                    "name": "API Integration"
+                  },
+                  {
+                    "name": "Performance Optimization"
+                  }
+                ],
+                "ctaText": "Explore web development",
+                "ctaLink": "/services/web-development",
+                "video": "/Digital_marketing.mp4",
+                "videoType": "mp4"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "ImpactStats",
+          "data": {
+            "label": "Impact",
+            "title": "Elevating Brands With Measurable Impact",
+            "stats": [
+              {
+                "value": "850+",
+                "label": "Brands Transformed Worldwide",
+                "description": "We've Partnered With Global Startups And Enterprises To Craft Design Systems That Fuel Lasting Growth."
+              },
+              {
+                "value": "3M+",
+                "label": "Monthly Visitors Engaged",
+                "description": "Our Websites And Campaigns Attract And Convert Millions Of Users With Design That Inspires Action."
+              },
+              {
+                "value": "97%",
+                "label": "Client Retention Rate",
+                "description": "Long-Term Partnerships Prove The Trust And Results Our Creative Strategies Consistently Deliver."
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "CTASection",
+          "data": {
+            "title": "Ready To Work With Us?",
+            "subtitle": "Let's collaborate to bring your vision to life. Our team is ready to help you create something extraordinary.",
+            "buttonText": "Get In Touch",
+            "buttonLink": "/contact",
+            "backgroundColor": "bg-black",
+            "textColor": "text-white"
+          }
+        }
+      ]
+    }
+  },
+  "works": {
+    "data": {
+      "seo": {
+        "id": 7,
+        "metaTitle": "Our Works - Excelledia",
+        "metaDescription": "Explore our portfolio of successful projects and creative solutions.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "InnerBanner",
+          "data": {
+            "title": "Our Works",
+            "backgroundImage": "/images/service-bg.webp"
+          }
+        },
+        {
+          "widget_type": "ProjectList",
+          "data": {
+            "label": "Projects",
+            "title": "Projects That Speak For",
+            "titleLine2": "Themselves",
+            "description": "Every project is a story of collaboration, creativity, and measurable results. Explore how we've helped brands grow and thrive.",
+            "projects": [
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "SparkHub",
+                "tags": [
+                  "Mobile App",
+                  "Strategy"
+                ],
+                "link": "works/cloud-nest"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "PulseTrack",
+                "tags": [
+                  "Branding",
+                  "E-Commerce"
+                ],
+                "link": "works/cloud-nest"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "FlowDesk",
+                "tags": [
+                  "Branding",
+                  "Saas"
+                ],
+                "link": "works/cloud-nest"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "CloudNest",
+                "tags": [
+                  "Finance",
+                  "Saas"
+                ],
+                "link": "works/cloud-nest"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "CTASection",
+          "data": {
+            "title": "Ready To Work With Us?",
+            "subtitle": "Let's collaborate to bring your vision to life. Our team is ready to help you create something extraordinary.",
+            "buttonText": "Get In Touch",
+            "buttonLink": "/contact",
+            "backgroundColor": "bg-black",
+            "textColor": "text-white"
+          }
+        }
+      ]
+    }
+  },
+  "works/cloud-nest": {
+    "data": {
+      "seo": {
+        "id": 8,
+        "metaTitle": "CloudNest - Project Details | Excelledia",
+        "metaDescription": "Discover how we created a modern digital presence for CloudNest, blending intuitive UI with strong branding.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "WorkDetailBanner",
+          "data": {
+            "backLink": "/works",
+            "backLinkText": "Back To Projects",
+            "title": "CloudNest",
+            "description": "For CloudNest, we created a modern digital presence that blends intuitive UI with strong branding, helping them stand out in the competitive cloud services space.",
+            "servicesHeading": "Services Provided",
+            "services": [
+              "Brand Design",
+              "Web & App Design",
+              "Digital Marketing Strategy"
+            ],
+            "visitWebsiteText": "Visit Website",
+            "visitWebsiteLink": "https://cloudnest.com",
+            "mainImage": "/images/banner1.png",
+            "client": "CloudNest",
+            "year": "2025",
+            "timeline": "4 Weeks"
+          }
+        },
+        {
+          "widget_type": "WorkCaseStudy",
+          "data": {
+            "sections": [
+              {
+                "heading": "Overview",
+                "title": "CloudNest Approached Us To Create A Digital Experience That Matched Their Forward-Thinking Approach To Cloud Technology.",
+                "description": "CloudNest's growing client base and innovative solutions required a brand identity and website that clearly communicated their reliability, scalability, and modern edge.",
+                "images": [
+                  "/images/banner1.png",
+                  "/images/banner1.png"
+                ]
+              },
+              {
+                "heading": "Challenges",
+                "title": "Despite Their Strong Product Offering, CloudNest Struggled To Stand Out In A Crowded And Competitive Market.",
+                "description": "CloudNest's existing website felt generic and failed to highlight their strengths in security, innovation, and customer trust, necessitating a platform that would inform and inspire confidence.",
+                "images": [
+                  "/images/banner1.png",
+                  "/images/banner1.png",
+                  "/images/banner1.png"
+                ],
+                "imageLayout": "left-one-right-two"
+              },
+              {
+                "heading": "Solutions",
+                "title": "The New CloudNest Platform Was Built With Scalability In Mind, Giving Their Team The Flexibility To Grow Without Sacrificing Usability.",
+                "description": "We partnered with CloudNest on both design and messaging, ensuring the site reflected their trust and innovation. Our copywriting emphasized clarity, reliability, and value-driven benefits. Immediate results included a 55% increase in time-on-site, doubled inbound leads, and client engagement rates surpassing industry benchmarks. This project reinforced our belief that design is more than visuals.",
+                "image": "/images/banner1.png"
+              },
+              {
+                "heading": "Results",
+                "title": "The Redesign Gave CloudNest A Digital Presence That Aligned With Their Innovation And Ambition.",
+                "description": "Bounce rates dropped by 42%, demo requests grew by 86%, time-on-site increased by 60%, and the brand began generating 2x more qualified leads from enterprise buyers. Stronger client confidence and pride in showcasing the new platform to partners and investors confirmed that the digital presence now matched the product's quality."
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "HomeProject",
+          "data": {
+            "label": "More Projects",
+            "title": "Explore More of Our Work",
+            "description": "Take a look at other collaborations where we helped brands grow through creativity and technology.",
+            "buttonText": "View All Project",
+            "buttonLink": "/projects",
+            "projects": [
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "SparkHub",
+                "tags": [
+                  "Mobile App",
+                  "Strategy"
+                ],
+                "link": "/project/sparkhub"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "PulseTrack",
+                "tags": [
+                  "Branding",
+                  "E-Commerce"
+                ],
+                "link": "/project/pulsetrack"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "FlowDesk",
+                "tags": [
+                  "Branding",
+                  "Saas"
+                ],
+                "link": "/project/flowdesk"
+              },
+              {
+                "image": "/images/pro1.png",
+                "year": "2025",
+                "title": "CloudNest",
+                "tags": [
+                  "Finance",
+                  "Saas"
+                ],
+                "link": "/project/cloudnest"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "contact": {
+    "data": {
+      "seo": {
+        "id": 9,
+        "metaTitle": "Contact Us - Elvora",
+        "metaDescription": "Get in touch with us. We're here to help bring your vision to life.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "InnerBanner",
+          "data": {
+            "title": "Contact Us",
+            "backgroundImage": ""
+          }
+        },
+        {
+          "widget_type": "ContactPage",
+          "data": {
+            "label": "Book A Call",
+            "title": "Your Next Big Move Starts Here",
+            "description": "Reach out today and let's explore how our expertise can bring your vision to life. We're just a call away from turning ideas into impact.",
+            "profile": {
+              "image": "/images/team1.png",
+              "name": "Hana Suzuki",
+              "role": "Client Success Manager",
+              "description": "If you'd rather talk it through than type it out, I'm here and ready to chat anytime",
+              "buttonText": "Talk Directly To Me",
+              "buttonLink": "tel:+123498245"
+            },
+            "contactForm": {
+              "heading": "Contact Us",
+              "submitButtonText": "Submit",
+              "termsText": "By submitting, you agree to our",
+              "termsLink": "/terms"
+            },
+            "reachOut": {
+              "heading": "Reach Out",
+              "email": "hello@Elvora.com",
+              "phone": "+1234 982 45"
+            },
+            "socials": {
+              "heading": "Socials",
+              "links": [
+                {
+                  "platform": "X/Twitter",
+                  "url": "https://twitter.com"
+                },
+                {
+                  "platform": "Instagram",
+                  "url": "https://instagram.com"
+                },
+                {
+                  "platform": "Facebook",
+                  "url": "https://facebook.com"
+                },
+                {
+                  "platform": "LinkedIn",
+                  "url": "https://linkedin.com"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "widget_type": "FAQSection",
+          "data": {
+            "label": "FAQ",
+            "title": "Everything You Need To Know",
+            "description": "Explore our FAQs for clarity on our approach, services, and results. And if you don't see your answer, we're just a call away.",
+            "faqs": [
+              {
+                "question": "How Long Does A Typical Project Take?",
+                "answer": "Our Timelines Vary Depending On Scope, But Most Brand Identity Projects Take 2-3 Weeks, While Full Websites Can Take 4-8 Weeks From Start To Launch."
+              },
+              {
+                "question": "Do You Work With Startups Or Only Established Companies?",
+                "answer": "We Work With Both. Whether You're Launching Your First Brand Or Scaling An Existing Business, We Tailor Our Services To Match Your Stage And Goals."
+              },
+              {
+                "question": "What If I Need More Than What's Included In A Package?",
+                "answer": "No Problem. Our Pricing Plans Are Flexible — We Can Add Services Like SEO, Content Creation, Or Marketing Support To Create A Custom Solution."
+              },
+              {
+                "question": "Do You Offer Ongoing Support After Launch?",
+                "answer": "Yes. We Provide Post-Launch Support, From Technical Fixes To Design Updates, And Can Also Partner On Long-Term Optimization And Growth."
+              },
+              {
+                "question": "Will My Website Work On Mobile Devices?",
+                "answer": "Absolutely. Every Site We Design Is Responsive By Default, Meaning It Adapts Seamlessly To Mobile, Tablet, And Desktop Screens."
+              },
+              {
+                "question": "How Do We Get Started?",
+                "answer": "Simply Book A Call With Our Team. We'll Learn About Your Goals, Outline The Right Plan, And Guide You Step-By-Step Through The Process."
+              }
+            ],
+            "ctaTitle": "Didn't Find Your Answer?",
+            "ctaDescription": "We'd love to help. Book a call with our team and get answers tailored to your specific needs.",
+            "ctaButtonText": "Contact Us",
+            "ctaButtonLink": "/contact"
+          }
+        }
+      ]
+    }
+  },
+  "blogs": {
+    "data": {
+      "seo": {
+        "id": 10,
+        "metaTitle": "Blogs - Elvora",
+        "metaDescription": "Read our latest articles and insights on design, development, and digital marketing.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "InnerBanner",
+          "data": {
+            "title": "Blogs",
+            "backgroundImage": ""
+          }
+        },
+        {
+          "widget_type": "BlogList",
+          "data": {
+            "blogs": [
+              {
+                "image": "/images/blog1.png",
+                "author": "Emily Chen",
+                "date": "March 4, 2025",
+                "title": "Why Strong Branding Is The Key To Business Growth",
+                "tags": [
+                  "Branding",
+                  "Strategy"
+                ],
+                "link": "/blog/strong-branding-key-business-growth"
+              },
+              {
+                "image": "/images/blog2.png",
+                "author": "Daniel Carter",
+                "date": "April 12, 2025",
+                "title": "The Future Of No-Code Development For Startups",
+                "tags": [
+                  "Development",
+                  "Innovation"
+                ],
+                "link": "/blog/future-no-code-development-startups"
+              },
+              {
+                "image": "/images/blog2.png",
+                "author": "Priya Shah",
+                "date": "May 1, 2025",
+                "title": "Designing Websites That Convert: 5 Proven Principles",
+                "tags": [
+                  "Marketing",
+                  "UI/UX"
+                ],
+                "link": "/blog/designing-websites-convert-principles"
+              },
+              {
+                "image": "/images/blog1.png",
+                "author": "Hana Suzuki",
+                "date": "June 10, 2025",
+                "title": "The Psychology Of Color In Branding: How Shades Shape Perception",
+                "tags": [
+                  "Branding",
+                  "Design"
+                ],
+                "link": "/blog/psychology-color-branding"
+              },
+              {
+                "image": "/images/blog2.png",
+                "author": "Ethan Wong",
+                "date": "July 2, 2025",
+                "title": "How No-Code Tools Are Changing Web Development",
+                "tags": [
+                  "Development",
+                  "Innovation"
+                ],
+                "link": "/blog/no-code-tools-web-development"
+              },
+              {
+                "image": "/images/blog1.png",
+                "author": "Priya Shah",
+                "date": "July 18, 2025",
+                "title": "Design Systems: The Secret To Scalable Products",
+                "tags": [
+                  "Product Design",
+                  "UI/UX"
+                ],
+                "link": "/blog/design-systems-scalable-products"
+              },
+              {
+                "image": "/images/blog2.png",
+                "author": "Michael Rivera",
+                "date": "August 5, 2025",
+                "title": "Why Storytelling Matters In Digital Marketing",
+                "tags": [
+                  "Marketing",
+                  "Strategy"
+                ],
+                "link": "/blog/storytelling-digital-marketing"
+              },
+              {
+                "image": "/images/blog1.png",
+                "author": "Sophia Martinez",
+                "date": "August 28, 2025",
+                "title": "Creating Seamless User Journeys Across Platforms",
+                "tags": [
+                  "Customer Experience",
+                  "UI/UX"
+                ],
+                "link": "/blog/seamless-user-journeys-platforms"
+              }
+            ],
+            "loadMoreText": "Load More Articles"
+          }
+        }
+      ]
+    }
+  },
+  "blog/strong-branding-key-business-growth": {
+    "data": {
+      "seo": {
+        "id": 11,
+        "metaTitle": "Why Strong Branding Is The Key To Business Growth - Elvora",
+        "metaDescription": "Discover how strong branding can drive business growth and set your company apart from competitors.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "BlogDetailBanner",
+          "data": {
+            "backLink": "/blogs",
+            "backLinkText": "Back To Blogs",
+            "title": "Why Strong Branding Is The Key To Business Growth",
+            "description": "Discover how strong branding builds trust, drives loyalty, and sets the foundation for long-term business growth. Learn why your brand identity is more than visuals — it's the engine behind recognition, connection, and success.",
+            "categoriesHeading": "Categories",
+            "categories": [
+              "Branding",
+              "Strategy"
+            ],
+            "tags": [
+              "Branding",
+              "Business Growth",
+              "Marketing"
+            ],
+            "readArticleText": "Read Full Article",
+            "readArticleLink": "#",
+            "mainImage": "/images/blog1.png",
+            "author": "Emily Chen",
+            "date": "March 4, 2025",
+            "readTime": "5 min read"
+          }
+        },
+        {
+          "widget_type": "BlogDetailContent",
+          "data": {
+            "sections": [
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "The Hidden Driver Of Business Growth"
+              },
+              {
+                "type": "paragraph",
+                "content": "When it comes to scaling a business, many companies focus on sales tactics, product features, or marketing campaigns. But there's a hidden driver that often gets overlooked: branding. Strong branding isn't just about having a nice logo or catchy tagline—it's about building a story, creating emotion, and establishing trust. It's what makes customers remember you, choose you, and stay loyal to you. In short, branding is the foundation of recognition, loyalty, and long-term growth."
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "Branding Is The Foundation Of Trust"
+              },
+              {
+                "type": "paragraph",
+                "content": "Your brand is often the first thing customers notice about your business. Before they read your product descriptions or compare your prices, they form an impression based on your brand identity. This first impression influences whether they decide to engage, trust, and ultimately buy from you."
+              },
+              {
+                "type": "paragraph",
+                "content": "A strong brand helps you:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Differentiate: Stand out with a unique identity that sets you apart from competitors.",
+                  "Build Trust: Establish credibility and authority in your industry, making customers feel confident in their choice.",
+                  "Drive Loyalty: Give customers a reason to come back, not just for your products, but for the experience and values you represent."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": "Without strong branding, even the best products can struggle to gain traction. Customers need more than features—they need a connection, a reason to care, and a story that resonates."
+              },
+              {
+                "type": "image",
+                "image": "/images/banner1.png",
+                "imageAlt": "Laptop mockup"
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "Brand Identity Vs. Marketing"
+              },
+              {
+                "type": "paragraph",
+                "content": "It's important to understand the difference between branding and marketing. Marketing drives short-term action—it tells customers \"Here's why you should buy today.\" Branding, on the other hand, builds long-term value—it tells customers \"Here's why you should trust us forever.\""
+              },
+              {
+                "type": "paragraph",
+                "content": "While marketing campaigns can generate immediate results, they're far more effective when built on a solid brand foundation. A strong brand gives your marketing efforts meaning, context, and emotional resonance. Without it, marketing can feel generic, transactional, and forgettable."
+              },
+              {
+                "type": "heading",
+                "level": 3,
+                "content": "Great branding is about:"
+              },
+              {
+                "type": "list",
+                "items": [
+                  "Clarity: A simple, recognizable identity that customers can immediately understand and remember.",
+                  "Emotion: Connecting on a deeper, human level that goes beyond product features or price points.",
+                  "Consistency: Reinforcing your values and message across every touchpoint, from your website to your customer service.",
+                  "Vision: Showing customers where your business is going and inviting them to be part of that journey."
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": "Think of successful brands like Apple, Nike, or Starbucks. Their success isn't just about great products—it's about powerful brands that evoke feelings, create communities, and build lasting relationships. Their branding tells a story that customers want to be part of."
+              },
+              {
+                "type": "image",
+                "image": "/images/banner1.png",
+                "imageAlt": "Laptop mockup"
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "Conclusion"
+              },
+              {
+                "type": "paragraph",
+                "content": "Branding shouldn't be treated as an afterthought or a nice-to-have—it should be treated as a foundation. When you invest in building a clear identity, defining your values, and ensuring consistency across all channels, you're not just creating a logo or a color palette. You're creating how your business lives in the minds of your customers."
+              },
+              {
+                "type": "paragraph",
+                "content": "Strong branding builds trust, drives loyalty, and unlocks growth. It's the hidden driver that transforms one-time buyers into lifelong advocates and turns your business into a brand that customers believe in, support, and recommend."
+              },
+              {
+                "type": "paragraph",
+                "content": "Remember: Branding isn't a piece of your business. Branding is your business."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "services/digital-marketing": {
+    "data": {
+      "seo": {
+        "id": 10,
+        "metaTitle": "Digital Marketing - Excelledia",
+        "metaDescription": "Discover our comprehensive digital marketing services designed to help your business grow and succeed online.",
+        "metaOgImage": "",
+        "keywords": null,
+        "metaRobots": null,
+        "structuredData": null,
+        "metaViewport": null,
+        "canonicalURL": null,
+        "metaImage": {
+          "url": {
+            "url": "https://admin.excelledia.webc.in/uploads/OG_IMAGE_1_61fccf82b8.png",
+            "alternativeText": null
+          },
+          "alternativeText": null
+        },
+        "metaSocial": []
+      },
+      "widgets": [
+        {
+          "widget_type": "InnerBanner",
+          "data": {
+            "title": "Digital Marketing",
+            "backgroundImage": "/images/service-bg.webp"
+          }
+        },
+        {
+          "widget_type": "ServiceDetailAbout",
+          "data": {
+            "tabs": [
+              {
+                "label": "Overview",
+                "content": {
+                  "title": "Digital Marketing Overview",
+                  "description": "Transform your business with our comprehensive digital marketing solutions. We combine strategy, creativity, and data-driven insights to help you reach your target audience and achieve measurable results.",
+                  "items": [
+                    "Strategic planning and campaign development",
+                    "Multi-channel marketing approach",
+                    "Data-driven optimization and analytics",
+                    "Brand awareness and engagement",
+                    "Lead generation and conversion optimization"
+                  ]
+                }
+              },
+              {
+                "label": "Services",
+                "content": {
+                  "title": "Our Digital Marketing Services",
+                  "description": "We offer a full suite of digital marketing services to help your business grow and succeed in the digital landscape.",
+                  "items": [
+                    "Social Media Management and Strategy",
+                    "Search Engine Optimization (SEO)",
+                    "Pay-Per-Click Advertising (PPC)",
+                    "Content Marketing and Creation",
+                    "Email Marketing Campaigns",
+                    "Influencer Marketing",
+                    "Analytics and Performance Tracking"
+                  ]
+                }
+              },
+              {
+                "label": "Process",
+                "content": {
+                  "title": "Our Digital Marketing Process",
+                  "description": "Our proven process ensures every campaign is strategically planned, expertly executed, and continuously optimized for maximum impact.",
+                  "content": "We start with a comprehensive analysis of your business, target audience, and competitors. Our team develops a custom strategy tailored to your goals, then executes campaigns across multiple channels. We continuously monitor performance, analyze data, and make real-time optimizations to ensure you're getting the best results possible."
+                }
+              },
+              {
+                "label": "Results",
+                "content": {
+                  "title": "Proven Results",
+                  "description": "Our digital marketing strategies have helped businesses achieve significant growth and measurable ROI.",
+                  "items": [
+                    "Increased website traffic and engagement",
+                    "Higher conversion rates and lead generation",
+                    "Improved brand visibility and awareness",
+                    "Enhanced customer acquisition and retention",
+                    "Stronger online presence and authority"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "AboutGrid",
+          "data": {
+            "label": "About Us",
+            "title": "Driven By Creativity, Committed To Excellence.",
+            "description": "Our team blends strategy, design, and technology to craft solutions that not only look great but also deliver measurable results.",
+            "images": {
+              "topLeft": "/images/about1.png",
+              "bottomLeft": "/images/about2.png",
+              "right": "/images/about3.png"
+            },
+            "footerText": "Trusted by the biggest brands worldwide",
+            "brands": [
+              {
+                "name": "Samsung",
+                "logo": "/images/brands/samsung.png",
+                "alt": "Samsung"
+              },
+              {
+                "name": "AWS",
+                "logo": "/images/brands/aws.png",
+                "alt": "Amazon Web Services"
+              },
+              {
+                "name": "Netlify",
+                "logo": "/images/brands/netlify.png",
+                "alt": "Netlify"
+              },
+              {
+                "name": "Retool",
+                "logo": "/images/brands/retool.png",
+                "alt": "Retool"
+              }
+            ]
+          }
+        },
+        {
+          "widget_type": "FAQSection",
+          "data": {
+            "label": "FAQ",
+            "title": "Everything You Need To Know",
+            "description": "Explore our FAQs for clarity on our approach, services, and results. And if you don't see your answer, we're just a call away.",
+            "faqs": [
+              {
+                "question": "How Long Does A Typical Project Take?",
+                "answer": "Our Timelines Vary Depending On Scope, But Most Brand Identity Projects Take 2-3 Weeks, While Full Websites Can Take 4-8 Weeks From Start To Launch."
+              },
+              {
+                "question": "Do You Work With Startups Or Only Established Companies?",
+                "answer": "We Work With Both. Whether You're Launching Your First Brand Or Scaling An Existing Business, We Tailor Our Services To Match Your Stage And Goals."
+              },
+              {
+                "question": "What If I Need More Than What's Included In A Package?",
+                "answer": "No Problem. Our Pricing Plans Are Flexible — We Can Add Services Like SEO, Content Creation, Or Marketing Support To Create A Custom Solution."
+              },
+              {
+                "question": "Do You Offer Ongoing Support After Launch?",
+                "answer": "Yes. We Provide Post-Launch Support, From Technical Fixes To Design Updates, And Can Also Partner On Long-Term Optimization And Growth."
+              },
+              {
+                "question": "Will My Website Work On Mobile Devices?",
+                "answer": "Absolutely. Every Site We Design Is Responsive By Default, Meaning It Adapts Seamlessly To Mobile, Tablet, And Desktop Screens."
+              },
+              {
+                "question": "How Do We Get Started?",
+                "answer": "Simply Book A Call With Our Team. We'll Learn About Your Goals, Outline The Right Plan, And Guide You Step-By-Step Through The Process."
+              }
+            ],
+            "ctaTitle": "Didn't Find Your Answer?",
+            "ctaDescription": "We'd love to help. Book a call with our team and get answers tailored to your specific needs.",
+            "ctaButtonText": "Contact Us",
+            "ctaButtonLink": "/contact"
+          }
+        },
+        {
+          "widget_type": "CTASection",
+          "data": {
+            "title": "Ready To Work With Us?",
+            "subtitle": "Let's collaborate to bring your vision to life. Our team is ready to help you create something extraordinary.",
+            "buttonText": "Get In Touch",
+            "buttonLink": "/contact",
+            "backgroundColor": "bg-black",
+            "textColor": "text-white"
+          }
+        }
+      ]
+    }
+  }
+}

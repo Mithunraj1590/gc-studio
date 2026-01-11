@@ -1,0 +1,39 @@
+{
+  "name": "tw-next14-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "nodemon": "nodemon ./server.js localhost 8080"
+  },
+  "dependencies": {
+    "animejs": "^4.2.2",
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.17",
+    "next": "^16.0.0",
+    "next-pwa": "^5.6.0",
+    "react": "^19",
+    "react-dom": "^19",
+    "sass": "^1.69.7",
+    "simplex-noise": "^4.0.3",
+    "swiper": "^11.2.10",
+    "three": "^0.182.0"
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.13",
+    "@types/react": "19.2.7",
+    "@types/three": "^0.182.0",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^9",
+    "eslint-config-next": "^16.0.0",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "postcss": "^8",
+    "react-icomoon": "^2.6.1",
+    "react-intersection-observer": "^10.0.0",
+    "tailwindcss": "^3.3.0"
+  }
+}

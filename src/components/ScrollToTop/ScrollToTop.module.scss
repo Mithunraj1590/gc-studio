@@ -1,0 +1,15 @@
+.scroll_to_top {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0px 2px inset;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.3s ease all;
+}
+
+body {
+  &:global(.scroll-to-top-active) {
+    .scroll_to_top {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
