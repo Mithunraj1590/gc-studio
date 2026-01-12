@@ -13,6 +13,8 @@ interface Service {
   title: string;
   description: string;
   image?: string;
+  link?: string;
+  slug?: string;
 }
 
 interface HomeServiceProps {
@@ -185,28 +187,33 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
 
         {/* Services Grid */}
         <div ref={servicesGridRef} className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-6 sm:mb-8 lg:mb-12">
-          {services.map((service, index) => (
-            <div key={index} className="block">
-              <div className='bg-white rounded-lg p-4 sm:p-6 md:p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer'>
-                <h3 className="ttl text-xl sm:text-2xl md:text-[30px] font-semibold text-black mb-3 sm:mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
-                  {service.description}
-                </p>
-                {service.image && (
-                  <div className="relative w-full aspect-square rounded-lg overflow-hidden">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-110"
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
+          {services.map((service, index) => {
+            // Generate link from slug or title, or use provided link
+            const serviceLink = service.link || service.slug || `/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`;
+            
+            return (
+              <Link key={index} href={serviceLink} className="block">
+                <div className='bg-white rounded-lg p-4 sm:p-6 md:p-8 hover:shadow-lg transition-shadow duration-300 cursor-pointer'>
+                  <h3 className="ttl text-xl sm:text-2xl md:text-[30px] font-semibold text-black mb-3 sm:mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6">
+                    {service.description}
+                  </p>
+                  {service.image && (
+                    <div className="relative w-full aspect-square rounded-lg overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                    </div>
+                  )}
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Bottom Section - Static Content + CTA */}
