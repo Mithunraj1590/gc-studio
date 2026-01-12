@@ -11,8 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface WorkDetailBannerProps {
   data?: {
-    backLink?: string;
-    backLinkText?: string;
+  
     title?: string;
     description?: string;
     servicesHeading?: string;
@@ -142,22 +141,22 @@ const WorkDetailBanner: React.FC<WorkDetailBannerProps> = ({ data }) => {
   }, [pathname]);
 
   return (
-    <section ref={sectionRef} className="w-full py-12 sm:py-16 md:py-20 lg:py-[100px] bg-white">
+    <section ref={sectionRef} className="w-full py-12 sm:py-16 md:py-20 lg:py-[100px] lg:pt-[150px]">
       <div className="container mx-auto px-4">
         {/* Top Section: Content and CTA */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 mb-12 sm:mb-16 md:mb-20">
           {/* Left: Project Information */}
           <div ref={contentRef} className="flex flex-col">
             {/* Back Link */}
-            {data?.backLink && (
+         
               <Link
-                href={data.backLink}
+                href="/works"
                 className="text-sm text-gray-400 hover:text-gray-600 transition-colors mb-4 sm:mb-6 inline-flex items-center gap-2"
               >
                 <span>←</span>
-                <span>{data.backLinkText || 'Back To Projects'}</span>
+                <span>Back To Projects'</span>
               </Link>
-            )}
+       
 
             {/* Project Title */}
             {data?.title && (

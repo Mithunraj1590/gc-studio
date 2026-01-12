@@ -152,9 +152,9 @@ const HomeBanner: React.FC<HomeBannerProps> = ({ data }) => {
       {nextSlide && slides.length > 0 && (
         <div className="container absolute left-0 right-0 z-10 pointer-events-none px-4 sm:px-6 md:px-8" style={{ bottom: '100px' }}>
           <div className="flex justify-end">
-            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 bg-black/40 backdrop-blur-md rounded-lg p-2 sm:p-3 md:p-4 border border-white/20 shadow-lg pointer-events-auto">
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 bg-black/40 backdrop-blur-md rounded-none p-2 sm:p-3 md:p-4  shadow-lg pointer-events-auto">
               {hasThumbnailImage && (
-                <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/20">
+                <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-none overflow-hidden flex-shrink-0 border border-white/20">
                   <Image 
                     src={localThumbnailPath} 
                     alt={nextSlide.title}

@@ -115,7 +115,7 @@ const WorkCaseStudy: React.FC<WorkCaseStudyProps> = ({ data }) => {
   }, [pathname, sections.length]);
 
   return (
-    <section ref={sectionRef} className="w-full py-12 sm:py-16 md:py-20 lg:py-[100px] bg-white">
+    <section ref={sectionRef} className="w-full pb-12 sm:pb-16 md:pb-20 lg:pb-[100px] pt-[30px]">
       <div className="container mx-auto px-4">
         {sections.map((section, index) => (
           <div

@@ -6,6 +6,42 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import IntlTelInput from 'react-intl-tel-input';
+import 'react-intl-tel-input/dist/main.css';
+
+// Custom styles to ensure country code is visible
+if (typeof window !== 'undefined') {
+  const style = document.createElement('style');
+  style.textContent = `
+    .intl-tel-input {
+      width: 100% !important;
+    }
+    .intl-tel-input .selected-flag {
+
+      padding-right: 8px !important;
+      background-color: transparent !important;
+      display: flex!important;
+    }
+    .intl-tel-input .selected-flag .iti-flag {
+      margin-right: 6px !important;
+    }
+    .iti-flag.in{
+     position: absolute;
+     left: 0;
+     flex: 0 0 20px;
+    }
+    .intl-tel-input .selected-dial-code {
+      display: inline-block !important;
+      margin-right: 6px !important;
+      padding-left: 50px !important;
+      color: inherit !important;
+    }
+    .intl-tel-input input {
+      padding-left: 100px !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,8 +86,16 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
     firstName: '',
     lastName: '',
     email: '',
+    countryCode: '',
+    phone: '',
     message: '',
   });
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
 
   // Normalize image path
   const normalizeImagePath = (path: string | undefined | null, fallback: string): string => {
@@ -75,7 +119,6 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
     
     sections.forEach((sectionEl) => {
       gsap.set(sectionEl, { opacity: 0, y: 30 });
-
       ScrollTrigger.create({
         trigger: sectionEl as HTMLElement,
         start: 'top 80%',
@@ -105,17 +148,115 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
     };
   }, [pathname]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Auto-hide success message after 5 seconds
+  useEffect(() => {
+    if (submitStatus.type === 'success') {
+      const timer = setTimeout(() => {
+        setSubmitStatus({ type: null, message: '' });
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus.type]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      // Get API URL
+      let apiUrl = process.env.NEXT_PUBLIC_API_URL || '';
+      
+      // If API URL is not set, use the WordPress domain directly
+      if (!apiUrl) {
+        apiUrl = 'https://lightsalmon-gaur-152305.hostingersite.com';
+      }
+      
+      // Remove trailing slash if present
+      apiUrl = apiUrl.replace(/\/$/, '');
+      
+      // Construct the endpoint URL - only use vorix/v1/contact
+      const endpoint = `${apiUrl}/vorix/v1/contact`;
+      
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          countryCode: formData.countryCode,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
+
+      // Check if response is ok before trying to parse JSON
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Error Response:', errorText);
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: result.message || 'Thank you! Your message has been sent successfully.',
+        });
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          countryCode: '',
+          phone: '',
+          message: '',
+        });
+        setPhoneNumber('');
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: result.message || 'Something went wrong. Please try again.',
+        });
+      }
+    } catch (error: any) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: error.message || 'Failed to send message. Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const target = e.target as HTMLInputElement | HTMLTextAreaElement;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [target.name]: target.value,
     });
+  };
+
+  // Handle text input - only allow letters and spaces
+  const handleTextInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/[^a-zA-Z\s]/g, '');
+    setFormData({
+      ...formData,
+      [e.target.name]: value,
+    });
+  };
+
+  // Handle phone input - only allow numbers
+  const handlePhoneInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value.replace(/[^\d]/g, '');
+    e.target.value = value;
+    handleChange(e);
   };
 
   const label = data?.label || 'Book A Call';
@@ -128,7 +269,6 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
       <div className="container mx-auto px-4">
         {/* Top Section: Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20 contact-section">
-        
           <h2 className="h2 font-semibold leading-tight text-black mb-4 sm:mb-6 max-w-4xl mx-auto">
             {title}
           </h2>
@@ -155,7 +295,6 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
                       sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 192px"
                     />
                   </div>
-
                   {/* Profile Content */}
                   <div className="flex-1">
                     <p className="text-white text-base sm:text-lg mb-2">
@@ -168,14 +307,12 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
                       {data.profile.description || "If you'd rather talk it through than type it out, I'm here and ready to chat anytime"}
                     </p>
                     {data.profile.buttonLink && (
-                      <>
-                        <Link
-                          href={data.profile.buttonLink}
-                          className="btn btn-secondary"
-                        >
-                          {data.profile.buttonText || 'Talk Directly To Me'}
-                        </Link>
-                      </>
+                      <Link
+                        href={data.profile.buttonLink}
+                        className="btn btn-secondary"
+                      >
+                        {data.profile.buttonText || 'Talk Directly To Me'}
+                      </Link>
                     )}
                   </div>
                 </div>
@@ -245,7 +382,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
                     name="firstName"
                     placeholder="First Name"
                     value={formData.firstName}
-                    onChange={handleChange}
+                    onChange={handleTextInput}
+                    pattern="[A-Za-z\s]+"
                     className="w-full px-0 py-3 border-0 border-b border-[#DDDDDD] bg-transparent focus:outline-none focus:border-black transition-colors duration-300 text-base sm:text-lg"
                     required
                   />
@@ -256,7 +394,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
                     name="lastName"
                     placeholder="Last Name"
                     value={formData.lastName}
-                    onChange={handleChange}
+                    onChange={handleTextInput}
+                    pattern="[A-Za-z\s]+"
                     className="w-full px-0 py-3 border-0 border-b border-[#DDDDDD] bg-transparent focus:outline-none focus:border-black transition-colors duration-300 text-base sm:text-lg"
                     required
                   />
@@ -269,8 +408,35 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                   className="w-full px-0 py-3 border-0 border-b border-[#DDDDDD] bg-transparent focus:outline-none focus:border-black transition-colors duration-300 text-base sm:text-lg"
                   required
+                />
+              </div>
+              <div className="w-full">
+                <IntlTelInput
+                  containerClassName="intl-tel-input w-full"
+                  inputClassName="w-full px-0 py-3 border-0 border-b border-[#DDDDDD] bg-transparent focus:outline-none focus:border-black transition-colors duration-300 text-base sm:text-lg"
+                  value={phoneNumber}
+                  defaultCountry="in"
+                  format={false}
+                  separateDialCode={true}
+                  autoHideDialCode={false}
+                  onPhoneNumberChange={(isValid, value, selectedCountryData, fullNumber) => {
+                    // When separateDialCode is true:
+                    // - value: number without country code (for input display)
+                    // - fullNumber: complete number with country code (for submission)
+                    // - selectedCountryData.dialCode: country code (e.g., "+91")
+                    // Only allow numbers in the phone value
+                    const numericValue = (value || '').replace(/[^\d]/g, '');
+                    setPhoneNumber(numericValue);
+                    setFormData({
+                      ...formData,
+                      phone: numericValue,
+                      countryCode: selectedCountryData?.dialCode || '',
+                    });
+                  }}
+                  preferredCountries={['in', 'us', 'gb', 'au', 'ca']}
                 />
               </div>
               <div>
@@ -295,14 +461,29 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
                     )}
                   </p>
                 )}
+                
+              
                 <button
                   type="submit"
                   className="btn btn-primary"
+                  disabled={isSubmitting}
                 >
-                  {data?.contactForm?.submitButtonText || 'Submit'}
+                  {isSubmitting
+                    ? 'Submitting...'
+                    : data?.contactForm?.submitButtonText || 'Submit'}
                 </button>
-        
-                
+                  {/* Success/Error Messages */}
+                  {submitStatus.type && (
+                  <div
+                    className={`my-4 ${
+                      submitStatus.type === 'success'
+                        ? 'text-[#008000]'
+                        : 'text-[#CD1C18]'
+                    }`}
+                  >
+                    <p className="text-sm sm:text-base">{submitStatus.message}</p>
+                  </div>
+                )}
               </div>
             </form>
           </div>
@@ -313,4 +494,3 @@ const ContactPage: React.FC<ContactPageProps> = ({ data }) => {
 };
 
 export default ContactPage;
-

@@ -12,43 +12,41 @@ const Footer: React.FC<FooterProps> = ({ style_2 }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={`footer-wrapper bg-[#141414] pb-[50px]`}>
-      <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
-      
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8 lg:gap-12 py-12 lg:py-16">
+    <footer className={`footer-wrapper bg-[#141414] pt-20 pb-16`}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20 pb-16">
           {/* Logo and Description */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-1 xl:col-span-1">
+          <div className="col-span-1 md:col-span-2 lg:col-span-1">
             <div className="footer-card">
-              <Link href="/" className="block mb-4">
+              <Link href="/" className="inline-block mb-6 transition-opacity duration-300 hover:opacity-80">
                 <Image
                   className="dark-logo hidden dark:block"
                   src="/assets/img/core-img/logo.png"
                   alt="Logo"
-                  width={120}
-                  height={40}
+                  width={140}
+                  height={45}
                 />
                 <Image
                   className="light-logo block dark:hidden"
                   src="/assets/img/core-img/logo-light.png"
                   alt="Logo"
-                  width={120}
-                  height={40}
+                  width={140}
+                  height={45}
                 />
               </Link>
-              <p className="text-sm text-[#878787] mb-6">
+              <p className="text-sm text-[#878787] mb-8 leading-relaxed max-w-sm">
                 Creative design agency specializes in innovative visual solutions
               </p>
               <div className="social-nav flex items-center gap-4">
                 <Link
                   href="#"
-                  className="w-8 h-8 flex items-center justify-center text-white hover:text-primary transition-colors duration-300"
+                  className="w-11 h-11 flex items-center justify-center text-[#878787] hover:text-white hover:bg-white/10 rounded-lg border border-white/5 hover:border-white/20 transition-all duration-300"
                   aria-label="Facebook"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     className="bi bi-facebook"
                     viewBox="0 0 16 16"
@@ -58,13 +56,13 @@ const Footer: React.FC<FooterProps> = ({ style_2 }) => {
                 </Link>
                 <Link
                   href="#"
-                  className="w-8 h-8 flex items-center justify-center text-white hover:text-primary transition-colors duration-300"
+                  className="w-11 h-11 flex items-center justify-center text-[#878787] hover:text-white hover:bg-white/10 rounded-lg border border-white/5 hover:border-white/20 transition-all duration-300"
                   aria-label="Twitter"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     className="bi bi-twitter-x"
                     viewBox="0 0 16 16"
@@ -74,13 +72,13 @@ const Footer: React.FC<FooterProps> = ({ style_2 }) => {
                 </Link>
                 <Link
                   href="#"
-                  className="w-8 h-8 flex items-center justify-center text-white hover:text-primary transition-colors duration-300"
+                  className="w-11 h-11 flex items-center justify-center text-[#878787] hover:text-white hover:bg-white/10 rounded-lg border border-white/5 hover:border-white/20 transition-all duration-300"
                   aria-label="LinkedIn"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     className="bi bi-linkedin"
                     viewBox="0 0 16 16"
@@ -90,13 +88,13 @@ const Footer: React.FC<FooterProps> = ({ style_2 }) => {
                 </Link>
                 <Link
                   href="#"
-                  className="w-8 h-8 flex items-center justify-center text-white hover:text-primary transition-colors duration-300"
+                  className="w-11 h-11 flex items-center justify-center text-[#878787] hover:text-white hover:bg-white/10 rounded-lg border border-white/5 hover:border-white/20 transition-all duration-300"
                   aria-label="Instagram"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     className="bi bi-instagram"
                     viewBox="0 0 16 16"
@@ -111,31 +109,46 @@ const Footer: React.FC<FooterProps> = ({ style_2 }) => {
           {/* Services */}
           <div className="col-span-1">
             <div className="footer-card">
-              <h5 className="text-base font-bold text-white mb-4">Services</h5>
-              <ul className="footer-nav space-y-3">
+              <h5 className="text-lg font-semibold text-white mb-6 tracking-tight">Services</h5>
+              <ul className="footer-nav space-y-3.5">
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-primary transition-colors duration-300">
-                    UI/UX Design
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      UI/UX Design
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-primary transition-colors duration-300">
-                    Mobile Apps Design
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      Mobile Apps Design
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300">
-                    Web Development
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      Web Development
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300">
-                    SaaS Design
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      SaaS Design
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300">
-                    Webflow Design
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      Webflow Design
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -145,115 +158,90 @@ const Footer: React.FC<FooterProps> = ({ style_2 }) => {
           {/* Resources */}
           <div className="col-span-1">
             <div className="footer-card">
-              <h5 className="text-base font-bold text-white mb-4">Resources</h5>
-              <ul className="footer-nav space-y-3">
+              <h5 className="text-lg font-semibold text-white mb-6 tracking-tight">Resources</h5>
+              <ul className="footer-nav space-y-3.5">
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300">
-                    About Us
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      About Us
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300">
-                    Portfolio
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      Portfolio
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300">
-                    Expert Team
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      Expert Team
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300">
-                    Pricing Plan
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      Pricing Plan
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300">
-                    Blog & News
+                  <Link href="#" className="text-sm text-[#878787] hover:text-white transition-colors duration-300 inline-block group">
+                    <span className="relative">
+                      Blog & News
+                      <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                    </span>
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Subscribe */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-1 xl:col-span-2">
-            <div className="footer-card">
-              <h5 className="text-base font-bold text-white mb-4">Subscribe</h5>
-              <form action="#" className="subscribe-form">
-                <div className="relative flex items-center mb-4 border border-[#141414]">
-                  <input
-                    type="email"
-                    className="form-control w-full px-4 py-3  bg-white text-black focus:outline-none focus:none focus:none focus:border-transparent pr-12"
-                    placeholder="Email address"
-                  />
-                  <button
-                    type="submit"
-                    className="btn btn-outline-secondary h-[48px] hover:!bg-transparent hover:!border-white hover:!text-white"
-                    aria-label="Subscribe"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
-                      />
-                    </svg>
-                  </button>
-                </div>
-                <div className="form-check flex items-start">
-                  <input
-                    className="form-check-input mt-1 w-4 h-4 border-white focus:ring-primary text-black"
-                    type="checkbox"
-                    id="flexCheckDefault"
-                  />
-                  <label className="form-check-label ps-2 text-sm text-[#878787]" htmlFor="flexCheckDefault">
-                    I agree with the terms and conditions.
-                  </label>
-                </div>
-              </form>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="border-t border-white/10 pt-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div>
+              <p className="para text-sm text-[#878787]">
+                Copyright © {currentYear}{' '}
+                <Link href="#" className="text-[#878787] hover:text-white transition-colors duration-300 font-medium">
+                  GC Studio
+                </Link>
+                . All rights reserved.
+              </p>
+            </div>
+            <div className="footer-bottom-nav flex items-center gap-8">
+              <Link
+                href="/terms-and-conditions"
+                className="text-sm text-[#878787] hover:text-white transition-colors duration-300 relative group"
+              >
+                <span className="relative">
+                  Terms & conditions
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="text-sm text-[#878787] hover:text-white transition-colors duration-300 relative group"
+              >
+                <span className="relative">
+                  Privacy policy
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full"></span>
+                </span>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="container mx-auto px-4">
-        <div className="footer-line w-full h-px bg-gray-200 dark:bg-gray-700 my-8"></div>
-      </div>
-
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 py-6">
-          <div className="text-sm text-white">
-            <p className="para text-sm mb-0 text-[#878787]">
-              Copyright © {currentYear}{' '}
-              <Link href="#" className="text-[#878787] hover:text-white">
-                GC Studio
-              </Link>
-            </p>
-          </div>
-          <div className="footer-bottom-nav flex items-center gap-6">
-            <Link
-              href="#"
-              className="text-sm text-[#878787] hover:text-white transition-colors duration-300"
-            >
-              Terms & conditions
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-[#878787] hover:text-white transition-colors duration-300"
-            >
-              Privacy policy
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full h-px bg-gray-200 dark:bg-gray-700"></div>
     </footer>
   );
 };

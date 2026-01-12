@@ -72,10 +72,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 </h3>
               )}
             </div>
-            {/* Tags - Next line on mobile, same line on larger screens */}
+            {/* Tags - Next line on mobile, same line on larger screens - Only show first 2 tags */}
             {tags && tags.length > 0 && (
-              <div className="flex items-center gap-1 sm:gap-2 sm:ml-auto flex-wrap">
-                {tags.map((tag, index) => (
+              <div className="flex item-end gap-1 sm:gap-2 sm:ml-auto flex-wrap">
+                {tags.slice(0, 2).map((tag, index) => (
                   <span
                     key={index}
                     className="px-2 text-[#878787] sm:px-3 py-1 text-[12px] sm:text-xs font-normal text-gray-700 border border-[#DDDDDD] rounded-[30px] hover:border-primary hover:text-primary transition-colors duration-300 whitespace-nowrap"
