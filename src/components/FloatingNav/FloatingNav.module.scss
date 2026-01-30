@@ -184,3 +184,19 @@
   }
 }
 
+.HomeIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+
+  @include max(640) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @include max(480) {
+    width: 16px;
+    height: 16px;
+  }
+}
+

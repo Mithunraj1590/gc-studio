@@ -23,6 +23,9 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
   const div2Ref = useRef<HTMLDivElement>(null);
   const div3Ref = useRef<HTMLDivElement>(null);
   const div4Ref = useRef<HTMLDivElement>(null);
+  const content2Ref = useRef<HTMLDivElement>(null);
+  const content3Ref = useRef<HTMLDivElement>(null);
+  const content4Ref = useRef<HTMLDivElement>(null);
   const h2Ref = useRef<HTMLHeadingElement>(null);
   const span2Ref = useRef<HTMLSpanElement>(null);
   const currentPhaseRef = useRef<number>(0);
@@ -37,6 +40,9 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
     const div2 = div2Ref.current;
     const div3 = div3Ref.current;
     const div4 = div4Ref.current;
+    const content2 = content2Ref.current;
+    const content3 = content3Ref.current;
+    const content4 = content4Ref.current;
     const h2 = h2Ref.current || div1?.querySelector('h2.stickytitle') as HTMLHeadingElement;
     const span2 = span2Ref.current || div1?.querySelector('h2.stickytitle .span2') as HTMLSpanElement;
 
@@ -45,6 +51,10 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
     gsap.set(div2, { opacity: 0, display: 'none' });
     gsap.set(div3, { opacity: 0, display: 'none' });
     gsap.set(div4, { opacity: 0, display: 'none' });
+    // Set initial scale for content elements (title & text)
+    if (content2) gsap.set(content2, { scale: 0.8 });
+    if (content3) gsap.set(content3, { scale: 0.8 });
+    if (content4) gsap.set(content4, { scale: 0.8 });
     if (span2) {
       span2.style.setProperty('--size-blend', '0%');
     }
@@ -88,6 +98,10 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
             gsap.to(div2, { opacity: 0, duration: 0.5, ease: 'power2.out', onComplete: () => gsap.set(div2, { display: 'none' }) });
             gsap.to(div3, { opacity: 0, duration: 0.5, ease: 'power2.out', onComplete: () => gsap.set(div3, { display: 'none' }) });
             gsap.to(div4, { opacity: 0, duration: 0.5, ease: 'power2.out', onComplete: () => gsap.set(div4, { display: 'none' }) });
+            // Scale down content when leaving
+            if (content2) gsap.to(content2, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
+            if (content3) gsap.to(content3, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
+            if (content4) gsap.to(content4, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
           }
           // Phase 2 (25% to 50%): Show div2
           else if (newPhase === 2) {
@@ -96,6 +110,10 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
             gsap.to(div2, { opacity: 1, duration: 0.5, ease: 'power2.out' });
             gsap.to(div3, { opacity: 0, duration: 0.5, ease: 'power2.out', onComplete: () => gsap.set(div3, { display: 'none' }) });
             gsap.to(div4, { opacity: 0, duration: 0.5, ease: 'power2.out', onComplete: () => gsap.set(div4, { display: 'none' }) });
+            // Scale up content2, scale down others
+            if (content2) gsap.to(content2, { scale: 1, duration: 0.5, ease: 'power2.out' });
+            if (content3) gsap.to(content3, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
+            if (content4) gsap.to(content4, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
           }
           // Phase 3 (50% to 75%): Show div3
           else if (newPhase === 3) {
@@ -104,6 +122,10 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
             gsap.set(div3, { display: 'flex' });
             gsap.to(div3, { opacity: 1, duration: 0.5, ease: 'power2.out' });
             gsap.to(div4, { opacity: 0, duration: 0.5, ease: 'power2.out', onComplete: () => gsap.set(div4, { display: 'none' }) });
+            // Scale up content3, scale down others
+            if (content2) gsap.to(content2, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
+            if (content3) gsap.to(content3, { scale: 1, duration: 0.5, ease: 'power2.out' });
+            if (content4) gsap.to(content4, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
           }
           // Phase 4 (75% to 100%): Show div4
           else if (newPhase === 4) {
@@ -112,6 +134,10 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
             gsap.to(div3, { opacity: 0, duration: 0.5, ease: 'power2.out', onComplete: () => gsap.set(div3, { display: 'none' }) });
             gsap.set(div4, { display: 'flex' });
             gsap.to(div4, { opacity: 1, duration: 0.5, ease: 'power2.out' });
+            // Scale up content4, scale down others
+            if (content2) gsap.to(content2, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
+            if (content3) gsap.to(content3, { scale: 0.8, duration: 0.5, ease: 'power2.out' });
+            if (content4) gsap.to(content4, { scale: 1, duration: 0.5, ease: 'power2.out' });
           }
         }
 
@@ -152,7 +178,7 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
   }, [pathname]);
 
   return (
-    <section ref={sectionRef} className="relative w-full" style={{ height: '100vh', minHeight: '100vh' }}>
+    <section ref={sectionRef} className="relative w-full bg-black" style={{ height: '100vh', minHeight: '100vh' }}>
       <div className="relative w-full h-full">
         {items.length > 0 && items[0] && (
           <div
@@ -172,8 +198,8 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
             ref={div2Ref}
             className="absolute inset-0 w-full h-full bg-black flex items-center justify-center text-white z-20"
           >
-            <div className='max-w-[60%] mx-auto text-center'>
-              <h2 className="h2 text-white mb-4">{items[1].title || ''}</h2>
+            <div ref={content2Ref} className='max-w-[60%] mx-auto text-center'>
+              <h2 className="ttl text-[70px] font-bold text-white mb-4">{items[1].title || ''}</h2>
               <p className="para text-white">{items[1].text || ''}</p>
             </div>
           </div>
@@ -183,8 +209,8 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
             ref={div3Ref}
             className="absolute inset-0 w-full h-full bg-black flex items-center justify-center text-white z-30"
           >
-            <div className='max-w-[60%] mx-auto text-center'>
-              <h2 className="h2 text-white mb-4">{items[2].title || ''}</h2>
+            <div ref={content3Ref} className='max-w-[60%] mx-auto text-center'>
+              <h2 className="ttl text-[70px] font-bold text-white mb-4">{items[2].title || ''}</h2>
               <p className="para text-white">{items[2].text || ''}</p>
             </div>
           </div>
@@ -194,8 +220,8 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({ data }) => {
             ref={div4Ref}
             className="absolute inset-0 w-full h-full bg-black flex items-center justify-center text-white z-40"
           >
-            <div className='max-w-[60%] mx-auto text-center'>
-              <h2 className="h2 text-white mb-4">{items[3].title || ''}</h2>
+            <div ref={content4Ref} className='max-w-[60%] mx-auto text-center'>
+              <h2 className="ttl text-[70px] font-bold text-white mb-4">{items[3].title || ''}</h2>
               <p className="para text-white">{items[3].text || ''}</p>
             </div>
           </div>

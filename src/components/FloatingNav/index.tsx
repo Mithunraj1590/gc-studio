@@ -103,14 +103,34 @@ const FloatingNav: React.FC = () => {
       <div className={Style.NavContainer}>
         {headerNavLinks.map((link) => {
           const isActive = pathname === link.href
+          const isHome = link.href === '/' || link.title.toLowerCase() === 'home'
+          
           return (
             <Link
               key={link.title}
               href={link.href}
               className={`${Style.NavLink} ${isActive ? Style.Active : ''}`}
               aria-current={isActive ? 'page' : undefined}
+              aria-label={isHome ? 'Home' : undefined}
             >
-              <span className={Style.NavText}>{link.title}</span>
+              {isHome ? (
+                <svg 
+                  className={Style.HomeIcon}
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+              ) : (
+                <span className={Style.NavText}>{link.title}</span>
+              )}
             </Link>
           )
         })}

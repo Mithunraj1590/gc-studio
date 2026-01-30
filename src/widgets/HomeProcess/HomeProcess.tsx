@@ -162,11 +162,11 @@ const HomeProcess: React.FC<HomeProcessProps> = ({ data }) => {
               className="absolute inset-0 bg-[#141414] rounded-lg sm:rounded-xl p-6 sm:p-8 md:p-10 lg:p-12"
               style={{ height: '488px' }}
             >
-              <div className="flex flex-col sm:flex-row items-start gap-6 sm:gap-8 md:gap-10 h-full">
+              <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-8 md:gap-10 h-full">
                 {/* Number with Orange Line */}
                 <div className="flex items-center gap-3 sm:gap-4">
                   <div className="w-px h-12 sm:h-16 md:h-20 bg-orange-500"></div>
-                  <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-400">
+                  <span className="text-[70px] inline-block font-bold text-white">
                     {step.number}
                   </span>
                 </div>
@@ -185,11 +185,11 @@ const HomeProcess: React.FC<HomeProcessProps> = ({ data }) => {
                 </div>
 
                 {/* Content */}
-                <div className="flex-1">
+                <div className="flex-1 ml-auto max-w-[50%]">
                   <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-400 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-white leading-relaxed">
                     {step.description}
                   </p>
                 </div>

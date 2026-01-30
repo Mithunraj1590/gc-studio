@@ -263,10 +263,10 @@ const HomeService: React.FC<HomeServiceProps> = ({ data }) => {
           {/* CTA Section */}
           <div ref={ctaRef} className="relative bg-[#141414] rounded-lg p-6 sm:p-8 lg:p-12">
             <div className="relative z-10">
-              <h3 className="ttl text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40px] font-semibold text-white mb-3 sm:mb-4">
+              <h3 className="ttl text-[20px] sm:text-[25px] md:text-[30px] lg:text-[40px] font-semibold text-white mb-3 sm:mb-4 leading-tight">
                 {ctaTitle}
               </h3>
-              <p className="text-base sm:text-lg text-white mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg text-white mb-6 sm:mb-8 max-w-md">
                 {ctaDescription}
               </p>
               <Link
